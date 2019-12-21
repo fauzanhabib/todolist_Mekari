@@ -23,48 +23,48 @@
   <!-- Tab panes -->
  
   <div class="tab-content">
-  @foreach ($data['list_todo'] as $list_todo)
-  @if($list_todo->type == 'html')
-    <div id="home" class="container tab-pane active"><br>
-      <h3>{{$list_todo->name}}</h3>
-      <pre><code class="language-markup">
-        {{$list_todo->desc}}
-      </code></pre>
-    </div>
-    @elseif($list_todo->type == 'php')
-    <div id="menu1" class="container tab-pane fade"><br>
-      <h3>{{$list_todo->name}}</h3>
-      <pre><code class="language-php">
-        {{$list_todo->desc}}
-      </code></pre>
-    </div>
-    @elseif($list_todo->type == 'css')
-    <div id="menu2" class="container tab-pane fade"><br>
-      <h3>{{$list_todo->name}}</h3>
-      <pre><code class="language-css">
-        {{$list_todo->desc}}
-      </code></pre>
-    </div>
-    @elseif($list_todo->type == 'js')
-    <div id="menu3" class="container tab-pane fade"><br>
-      <h3>{{$list_todo->name}}</h3>
-      <pre><code class="language-javascript">
-        {{$list_todo->desc}}
-      </code></pre>
-    </div>
+    @foreach ($data['list_todo'] as $list_todo)
+    @if($list_todo->type == 'html')
+      <div id="home" class="container tab-pane active"><br>
+        <h3>{{$list_todo->name}}</h3>
+        <pre><code class="language-markup">
+          {{$list_todo->desc}}
+        </code></pre>
+      </div>
+      @elseif($list_todo->type == 'php')
+      <div id="menu1" class="container tab-pane fade"><br>
+        <h3>{{$list_todo->name}}</h3>
+        <pre><code class="language-php">
+          {{$list_todo->desc}}
+        </code></pre>
+      </div>
+      @elseif($list_todo->type == 'css')
+      <div id="menu2" class="container tab-pane fade"><br>
+        <h3>{{$list_todo->name}}</h3>
+        <pre><code class="language-css">
+          {{$list_todo->desc}}
+        </code></pre>
+      </div>
+      @elseif($list_todo->type == 'js')
+      <div id="menu3" class="container tab-pane fade"><br>
+        <h3>{{$list_todo->name}}</h3>
+        <pre><code class="language-javascript">
+          {{$list_todo->desc}}
+        </code></pre>
+      </div>
 
-    @endif
-  
-    @endforeach
-  </div>
-  
+      @endif
+    
+      @endforeach
+    </div>
+    
 </div>
 
-<script>
-$(document).ready(function(){
-  $(".nav-tabs a").click(function(){
-    $(this).tab('show');
+  <script>
+  $(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+      $(this).tab('show');
+    });
   });
-});
-</script>
+  </script>
 @endsection
